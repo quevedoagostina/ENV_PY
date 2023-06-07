@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block banner %} 
+<div class="float-left col-sm-3">
+  <div class="container">
+    <h5>Bienvenido a nuestra página... Aquí encontrarás una completa lista de provincias y municipios de Argentina. Explora y descubre la diversidad y belleza de nuestras localidades. Disfruta de esta experiencia única mientras exploras nuestro hermoso país.</h5>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+<div class="container" id="contenedor">
+  <div class="card">
+    <div class="card-title"> Bienvenido </div>
+      <div class="card_body"> <h1>Cómo estás?</h1></div>
+  </div>
+</div>
+<div>
+  <form action="/login" method="post">
+    <input class="form-control w-25" type="text" name="usuario" placeholder="Ingrese el usuario">
+    <input class="form-control w-25" type="password" name="password" placeholder="Ingrese su contraseña">
+    <select name="tipo_usuario" class="form-control w-25">
+      <option value="0">Docentes</option>
+      <option value="1">Alumno</option>
+      <option value="2">Administración</option>
+    </select>
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+
+{% extends 'provincias.html' %}
+
+{% block title %} Municipios {% endblock %}
+{% block body %}
+
+{% if cant_municipios > 0 %}
+{% for mun in municipios %}
+    <a class="btn btn-primary">
+        {{ mun.nombre }}
+    </a>
+{% endfor %}
+{% else %}
+<p>No hay municipios disponibles.</p>
+{% endif %}    
+{% endblock %} 
+
